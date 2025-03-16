@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보험회사 전화번호 연결</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .company-list {
+            list-style-type: none;
+        }
+        .company-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .company-item:last-child {
+            border-bottom: none;
+        }
+        .company-name {
+            font-weight: bold;
+            color: #333;
+        }
+        .company-phone {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .company-phone:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 600px) {
+            .company-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .company-phone {
+                margin-top: 8px;
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>보험회사 전화번호 바로 연결</h1>
+        <input type="text" class="search-box" id="searchBox" placeholder="보험회사 이름을 검색하세요...">
+        
+        <ul class="company-list" id="companyList">
+            <!-- 여기에 보험회사 정보를 입력하세요 -->
+            <li class="company-item">
+                <span class="company-name">삼성화재</span>
+                <a href="tel:1588-5114" class="company-phone">1588-5114</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">현대해상</span>
+                <a href="tel:1588-5656" class="company-phone">1588-5656</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">KB손해보험</span>
+                <a href="tel:1544-0114" class="company-phone">1544-0114</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">DB손해보험</span>
+                <a href="tel:1588-0100" class="company-phone">1588-0100</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">메리츠화재</span>
+                <a href="tel:1566-7711" class="company-phone">1566-7711</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">한화손해보험</span>
+                <a href="tel:1566-8000" class="company-phone">1566-8000</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">롯데손해보험</span>
+                <a href="tel:1588-3344" class="company-phone">1588-3344</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">AIG손해보험</span>
+                <a href="tel:1544-2792" class="company-phone">1544-2792</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">삼성생명</span>
+                <a href="tel:1588-3114" class="company-phone">1588-3114</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">한화생명</span>
+                <a href="tel:1588-6363" class="company-phone">1588-6363</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">교보생명</span>
+                <a href="tel:1588-1001" class="company-phone">1588-1001</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">NH농협생명</span>
+                <a href="tel:1544-4000" class="company-phone">1544-4000</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">미래에셋생명</span>
+                <a href="tel:1588-0220" class="company-phone">1588-0220</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">신한생명</span>
+                <a href="tel:1588-5580" class="company-phone">1588-5580</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">DB생명</span>
+                <a href="tel:1588-3131" class="company-phone">1588-3131</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">KB생명</span>
+                <a href="tel:1588-9922" class="company-phone">1588-9922</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">라이나생명</span>
+                <a href="tel:1588-0058" class="company-phone">1588-0058</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">ABL생명</span>
+                <a href="tel:1588-6500" class="company-phone">1588-6500</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">푸르덴셜생명</span>
+                <a href="tel:1588-3374" class="company-phone">1588-3374</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">동양생명</span>
+                <a href="tel:1577-1004" class="company-phone">1577-1004</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">흥국생명</span>
+                <a href="tel:1588-2288" class="company-phone">1588-2288</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">오렌지라이프</span>
+                <a href="tel:1588-5005" class="company-phone">1588-5005</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">AIA생명</span>
+                <a href="tel:1588-9898" class="company-phone">1588-9898</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">BNP파리바카디프생명</span>
+                <a href="tel:1688-1118" class="company-phone">1688-1118</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">하나생명</span>
+                <a href="tel:1577-1112" class="company-phone">1577-1112</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">메트라이프생명</span>
+                <a href="tel:1588-9600" class="company-phone">1588-9600</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">처브라이프생명</span>
+                <a href="tel:1599-4600" class="company-phone">1599-4600</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">DGB생명</span>
+                <a href="tel:1588-4770" class="company-phone">1588-4770</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">KB손해보험</span>
+                <a href="tel:1544-0114" class="company-phone">1544-0114</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">현대라이프생명</span>
+                <a href="tel:1577-3311" class="company-phone">1577-3311</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">농협손해보험</span>
+                <a href="tel:1644-9000" class="company-phone">1644-9000</a>
+            </li>
+            <li class="company-item">
+                <span class="company-name">에이스손해보험</span>
+                <a href="tel:1566-5800" class="company-phone">1566-5800</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // 검색 기능
+        document.getElementById('searchBox').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const items = document.querySelectorAll('.company-item');
+            
+            items.forEach(item => {
+                const companyName = item.querySelector('.company-name').textContent.toLowerCase();
+                if (companyName.indexOf(searchTerm) > -1) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
